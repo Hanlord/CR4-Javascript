@@ -45,9 +45,9 @@ function importAction() {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
       if(btns[i]>2){
-        btns.style.backgroundColor ="bg-alert";
+        btns.style.backgroundColor ="yellow";
       } else if(btns[i]>5){
-        btns.style.backgroundColor ="red"
+        btns.style.backgroundColor ="red";
       }
   
 
@@ -57,21 +57,23 @@ function importAction() {
   }
 }
 
-function sortprio() {
-  let btnprio = document.getElementById("sorti");
-  for (let i = 0; i < btns.length;i++){
-    btnprio[i].addEventListener("click", function(){
-      tasks[i].sort((a, b)=> b.imp - a.imp);
-      updateHTML(sortprio);
-      var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
-      updateHTML(sortedArray);
-    })
-  }
-  var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
-  updateHTML(sortedArray);
+// function sortprio() {
+//   let btnprio = document.getElementById("sorti");
+//   for (let i = 0; i < btns.length;i++){
+//     btnprio[i].addEventListener("click", function(){
+//       tasks[i].sort((a, b)=> b.imp - a.imp);
+//       updateHTML(sortprio);
+//       var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+//       updateHTML(sortedArray);
+//     })
+//   }
+//   var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+//   updateHTML(sortedArray);
   
   
-}
+// }
+
+
 
 updateHTML(tasks);
 importAction();
