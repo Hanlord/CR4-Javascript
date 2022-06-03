@@ -45,9 +45,10 @@ function importAction() {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
       if(btns[i]>2){
-        btns.style.backgroundColor ="yellow";
+        document.getElementsbyClassName("result")[i].innerHTML.style.backgroundColor="yellow";
+        return
       } else if(btns[i]>5){
-        btns.style.backgroundColor ="red";
+        document.getElementsbyClassName("result")[i].innerHTML.style.backgroundColor="red";
       }
   
 

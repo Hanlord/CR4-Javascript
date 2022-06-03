@@ -3,15 +3,20 @@
     position: absolute;
     top: 30%;
     left: 50%;
+    padding: 10px;
     transform: translate(-50%, -50%);
-    background-color: linear-gradient(rgba(14, 13, 13, 0.5), rgba(17, 16, 16, 0.5));
+    background-color: linear-gradient(rgba(12, 11, 11, 0.5), rgba(5, 5, 5, 0.5));
   }
 
 .hero-image{
-    background-image:linear-gradient(rgba(80, 78, 78, 0.5), rgba(12, 12, 12, 0.5)), url("https://media.istockphoto.com/photos/laptop-with-calendar-app-on-screen-filled-with-different-weekly-and-picture-id1311432411?k=20&m=1311432411&s=612x612&w=0&h=btzb4BLuKT55UpKjkcQEI6JwY41HuG1I3Y9VaYxSc5w=");
-    height: 50vh;
+    background-image:linear-gradient(rgba(73, 68, 68, 0.5), rgba(19, 17, 17, 0.5)), url("https://media.istockphoto.com/photos/laptop-with-calendar-app-on-screen-filled-with-different-weekly-and-picture-id1311432411?k=20&m=1311432411&s=612x612&w=0&h=btzb4BLuKT55UpKjkcQEI6JwY41HuG1I3Y9VaYxSc5w=");
+    height: 40vh;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+.myclass{
+    float: right
 }
