@@ -95,8 +95,6 @@ function sortprio() {
   }
 }
 sortprio();
-        
-
 updateHTML(tasks);
 counterAction();
 change();
