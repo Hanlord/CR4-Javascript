@@ -35,10 +35,10 @@ function updateHTML(arr) {
 </div>
     `;
   }
-  importAction();
+  counterAction();
 }
 
-function importAction() {
+function counterAction() {
   let btns = document.getElementsByClassName("btn-prio");
   for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
@@ -74,20 +74,31 @@ function importAction() {
   
 // }
 
+// const btnArr2 = document.getElementsbyClassName("btn-prio")
+// const btnArr = document.getElementById("sorti");
+// for(i = 0;i < btnArr.length;i++){
+//   btnArr[i].addEventlistener("click",changeColor);
+// }
+// function changeColor(){
+//   let red = Math.floor(Math.random() * 255);
+//   let green = Math.floor(Math.random() * 255);
+//   let blue = Math.floor(Math.random() * 255);
+//   let btns = document.getElementsByClassName("btn-prio")
+//   if(btns[i]>2){
+//     document.getElementsbyClassName("btn-prio")[i].innerHTML.style.backgroundColor="yellow";
+//     return
+//   } else if(btns[i]>5){
+//     document.getElementsbyClassName("btn-prio")[i].innerHTML.style.backgroundColor="red";
+//   }
+//   document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+// }
+// changeColor()
+
 
 
 
 updateHTML(tasks);
-importAction();
+counterAction();
 
-const btnArr = document.getElementById("sorti");
-for(i = 0;i < btnArr.length;i++){
-  btnArr[i].addEventlistener("click",changeColor);
-}
-function changeColor(){
-  let red = Math.floor(Math.random() * 255);
-  let green = Math.floor(Math.random() * 255);
-  let blue = Math.floor(Math.random() * 255);
-  document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
-}
-changeColor()
+
+
