@@ -40,14 +40,14 @@ function updateHTML(arr) {
 
 function counterAction() {
   let btns = document.getElementsByClassName("btn-prio");
-  for (let i = 0; i < btns.length; i++) {
+  for (let i = 0; i <=5 ; i++ ) {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
-      document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
+      document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp++;
       if(btns[i]>2){
         document.getElementsbyClassName("result")[i].innerHTML.style.backgroundColor="yellow";
         return
-      } else if(btns[i]>5){
+      } else if(btns[i]>4){
         document.getElementsbyClassName("result")[i].innerHTML.style.backgroundColor="red";
       }
   
