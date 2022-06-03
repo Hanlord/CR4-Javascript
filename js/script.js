@@ -80,7 +80,7 @@ const btnArr = document.getElementsByTagName("btn-prio");
             document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
         }
   
-        //Sort Button
+//Sort Button
 
 function sortprio() {
   let btnprio = document.getElementById("sorti");
