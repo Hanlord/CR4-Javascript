@@ -66,6 +66,20 @@ function change(){
     
   }
 }
+
+// test
+
+const btnArr = document.getElementsByTagName("btn-prio");
+        for(i = 0; i < btnArr.length; i++){
+            btnArr[i].addEventListener("click", changeColor);
+        }
+        function changeColor(){
+            let red = Math.floor(Math.random() * 255);
+            let green = Math.floor(Math.random() * 255);
+            let blue = Math.floor(Math.random() * 255);
+            document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+        }
+
 updateHTML(tasks);
 counterAction();
 change();
@@ -90,18 +104,6 @@ changeColor();
 // sortprio(sortedArray);
 
 
-// test
-
-const btnArr = document.getElementsByTagName("btn-prio");
-        for(i = 0; i < btnArr.length; i++){
-            btnArr[i].addEventListener("click", changeColor);
-        }
-        function changeColor(){
-            let red = Math.floor(Math.random() * 255);
-            let green = Math.floor(Math.random() * 255);
-            let blue = Math.floor(Math.random() * 255);
-            document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
-        }
 
 
 
