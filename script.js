@@ -76,5 +76,18 @@ function importAction() {
 
 
 
+
 updateHTML(tasks);
 importAction();
+
+const btnArr = document.getElementById("sorti");
+for(i = 0;i < btnArr.length;i++){
+  btnArr[i].addEventlistener("click",changeColor);
+}
+function changeColor(){
+  let red = Math.floor(Math.random() * 255);
+  let green = Math.floor(Math.random() * 255);
+  let blue = Math.floor(Math.random() * 255);
+  document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+}
+changeColor()
