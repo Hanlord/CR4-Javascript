@@ -79,6 +79,23 @@ const btnArr = document.getElementsByTagName("btn-prio");
             let blue = Math.floor(Math.random() * 255);
             document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
         }
+  
+        //Sort Button
+
+function sortprio() {
+  let btnprio = document.getElementById("sorti");
+  for (let i = 0; i < btnprio.length;i++){
+    btnprio[i].addEventListener("click", function(){
+      tasks[i].sort((a, b)=> b.imp - a.imp);
+      updateHTML(sortprio);
+      let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+      console.log(sortedArray);
+      sortprio(sortedArray);
+    })
+  }
+}
+sortprio();
+        
 
 updateHTML(tasks);
 counterAction();
@@ -88,20 +105,7 @@ changeColor();
 
 
 
-//Sort Button
 
-// function sortprio() {
-//   let btnprio = document.getElementById("sorti");
-//   for (let i = 0; i < btns.length;i++){
-//     btnprio[i].addEventListener("click", function(){
-//       tasks[i].sort((a, b)=> b.imp - a.imp);
-//       updateHTML(sortprio);
-//       let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
-//       console.log(sortedArray);
-//     })
-//   }
-// }
-// sortprio(sortedArray);
 
 
 
