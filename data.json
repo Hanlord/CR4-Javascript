@@ -2,56 +2,56 @@ let cards = `
     [
         {
             "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "text": "walk around with puppy",
+            "image": "img/dog.jpg",
             "imp": 0,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "name": "Hofer",
+            "text": "you need supply",
+            "image": "img/supermarket.jpg",
             "imp": 0,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "name": "Spend time with Friends",
+            "text": "social life is important",
+            "image": "img/friends.jpg",
             "imp": 3,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "name": "Work",
+            "text": "Do your stuff!",
             "image": "img/planner.jpg",
             "imp": 2,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "name": "Clean Home",
+            "text": "don't live in a mess!",
+            "image": "img/home.webp",
             "imp": 0,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "name": "Visit family",
+            "text": "your loved ones are important",
+            "image": "img/family.jpg",
             "imp": 3,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "name": "be kind",
+            "text": "noone likes unfriendly persons",
+            "image": "img/kind.jpg",
             "imp": 0,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "name": "do workouts",
+            "text": "healthy live = better live",
+            "image": "img/workout.jpg",
             "imp": 5,
             "line": "27.01.2022"
         },{
-            "name": "Take the dog for a walk",
-            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
-            "image": "img/planner.jpg",
+            "name": "enjoy free time",
+            "text": "life needs a reason to live",
+            "image": "img/freetime.jpg",
             "imp": 4,
             "line": "27.01.2022"
         }

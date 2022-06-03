@@ -17,7 +17,7 @@ function updateHTML(arr) {
   <img src="${x.image}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${x.name}</h5>
-    <p class="card-text">${x.text}.</p><hr>
+    <p class="card-text">${x.text}</p><hr>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-triangle-exclamation"></i>
     <p>&ensp;Priority level: &nbsp;</p> <a class="btn-prio btn btn-success"><span class="result">${x.imp}</span></a>
@@ -45,7 +45,7 @@ function importAction() {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
       if(btns[i]>2){
-        btns.style.backgroundColor ="yellow";
+        btns.style.backgroundColor ="bg-alert";
       } else if(btns[i]>5){
         btns.style.backgroundColor ="red"
       }
@@ -58,7 +58,15 @@ function importAction() {
 }
 
 function sortprio() {
-  let btnprio = document.getElementsByClassName("sort");
+  let btnprio = document.getElementById("sorti");
+  for (let i = 0; i < btns.length;i++){
+    btnprio[i].addEventListener("click", function(){
+      tasks[i].sort((a, b)=> b.imp - a.imp);
+      updateHTML(sortprio);
+      var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+      updateHTML(sortedArray);
+    })
+  }
   var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
   updateHTML(sortedArray);
   
