@@ -1,0 +1,59 @@
+let cards = `
+    [
+        {
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 0,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 0,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 3,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 2,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 0,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 3,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 0,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 5,
+            "line": "27.01.2022"
+        },{
+            "name": "Take the dog for a walk",
+            "text": "Lorem ipsum dolor sit amet consectetur adispisicing elit.",
+            "image": "img/planner.jpg",
+            "imp": 4,
+            "line": "27.01.2022"
+        }
+    ]
+`
