@@ -36,21 +36,61 @@ function updateHTML(arr) {
     `;
   }
   counterAction();
-  
 }
 //button counter
 function counterAction() {
   let btns = document.getElementsByClassName("btn-prio");
   let count = 0;
   for (let i = 0; i < btns.length; i++ ) {
+    
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
+
+      function changebackground(){
+        if (tasks[i]>1){
+        document.getElementById("result").style.backgroundColor='yellow';
+      }else if (tasks[i]>2){
+        btns[i].addEventListener("click", function(){
+          tasks[i];
+          document.getElementsByClassName("result").style.backgroundColor='red';
+        })
+      }
+      }
+      changebackground();
+      
+      
+      //test if statement
+      // if(btns[i] > 1){
+      //   btns[i].addEventListener("click", function(){
+      //     tasks[i];
+      //     document.getElementsByClassName("result")[i].innerHTML.style.backgroundColor="yellow";
+      //   })
+      // }else if (btns[i]>2){
+      //   btns[i].addEventListener("click", function(){
+      //     tasks[i];
+      //     document.getElementsByClassName("result")[i].innerHTML.style.backgroundColor="red";
+      //   })
+      // }
+
+      //sort function test
       // let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
       // updateHTML(sortedArray);
     })
   }
 }
+//button sort test
+let btnsort =document.getElementById("sorti").addEventListener("click",sort);
+
+  function sort(){
+    
+    let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+      updateHTML(sortedArray);
+    }
+    sort();
+        // function
+
+
 //button color forloop test
 // function colorButn(){
 //   let btns = document.getElementsByClassName("btn-prio");
@@ -89,13 +129,13 @@ let btnArr = document.getElementsByClassName("btn-prio");
         function changeColor(){
             let red = Math.floor(Math.random() * 255);
             let green = Math.floor(Math.random() * 255);
-            let pink = Math.floor(Math.random() * 255);
-            document.body.style.backgroundColor = `rgb(${red},${green},${pink})`;
+            let yellow = Math.floor(Math.random() * 255);
+            document.body.style.backgroundColor = `rgb(${red},${green},${yellow})`;
         }
  changeColor();
 //Sort Button
 
-//test1
+// test1
 // const btnSort = document.querySelector("#sorti");
 // function  sorti(){
 //   let btnSort = tasks.sort((a, b));
