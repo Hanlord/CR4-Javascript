@@ -46,13 +46,13 @@ function counterAction() {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
-      var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
-      updateHTML(sortedArray);
+      // var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+      // updateHTML(sortedArray);
     })
   }
 }
 
-// color change
+// color change test
 
 function change(){
   let btns = document.getElementsByClassName("btn-prio");
@@ -70,40 +70,53 @@ function change(){
 }
 // change()
 
-// background test
+// background
 
-let btnArr = document.getElementsByTagName("btn-prio");
+let btnArr = document.getElementsByClassName("btn-prio");
         for(i = 0; i < btnArr.length; i++){
             btnArr[i].addEventListener("click", changeColor);
         }
         function changeColor(){
             let red = Math.floor(Math.random() * 255);
             let green = Math.floor(Math.random() * 255);
-            let blue = Math.floor(Math.random() * 255);
-            document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+            let pink = Math.floor(Math.random() * 255);
+            document.body.style.backgroundColor = `rgb(${red},${green},${pink})`;
         }
  changeColor();
 //Sort Button
 
-function sortprio() {
-  let btnprio = document.getElementById("sorti");
-  for (let i = 0; i < btnprio.length;i++){
-    btnprio[i].addEventListener("click", function(){
-      tasks[i].sort((a, b)=> b.imp - a.imp);
-      updateHTML(sortprio);
-      let sortedArrays = tasks.sort((a, b) => b.imp - a.imp);
-      console.log(sortedArrays);
-      sortprio(sortedArrays);
-    })
-  }
-}
+//test1
+// const btnSort = document.querySelector("#sorti");
+// function  sorti(){
+//   let btnSort = tasks.sort((a, b));
+//   btnSort.addEventListener("click", sorti());
+//   var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+//       updateHTML(sortedArray);
+  
+// }
+// sorti()
+
+
+ //test2
+// function sortprio() {
+//   let btnsorti = document.getElementById("sorti");
+//   for (let i = 0; i < btnsorti.length;i++){
+//     btnsorti[i].addEventListener("click", function(){
+//       tasks[i].sort((a, b)=> b.imp - a.imp);
+//       updateHTML(sortprio);
+//       let sortedArrays = tasks.sort((a, b) => b.imp - a.imp);
+//       console.log(sortedArrays);
+//       sortprio(sortedArrays);
+//     })
+//   }
+// }
 // sortprio()
 
 updateHTML(tasks);
 
 
 //test colorChange with arrow (e.target)
-const colorBtn = document.querySelector("#button1");
+const colorBtn = document.querySelector(".btn-prio");
 
 const btnAdd = document.querySelector("#button1");
 
@@ -113,10 +126,10 @@ btnAdd.addEventListener("click", (e)=>{
 })
 const colorChange = (e) => {
   console.log(e.target.value);
-  if(e.target.value > 2 ){
-    e.target.style.backgroundColor="yellow";
-  }else(e.target.value > 4);{
+  if(e.target.value > 2){
     e.target.style.backgroundColor="red";
+  }else if(e.target.value = 4){
+    e.target.style.backgroundColor="yellow";
   }
 }
 

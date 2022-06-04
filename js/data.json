@@ -10,49 +10,49 @@ let cards = `
             "name": "Hofer",
             "text": "you need supply",
             "image": "../img/supermarket.jpg",
-            "imp": 0,
+            "imp": 1,
             "line": "26.07.2022"
         },{
             "name": "Spend time with Friends",
             "text": "social life is important",
             "image": "../img/friends.jpg",
-            "imp": 3,
+            "imp": 2,
             "line": "27.06.2022"
         },{
             "name": "Work",
             "text": "Do your stuff!",
             "image": "../img/planner.jpg",
-            "imp": 2,
+            "imp": 4,
             "line": "27.05.2022"
         },{
             "name": "Clean Home",
             "text": "don't live in a mess!",
             "image": "../img/home.webp",
-            "imp": 0,
+            "imp": 3,
             "line": "27.10.2022"
         },{
             "name": "Visit family",
             "text": "your loved ones are important",
             "image": "../img/family.jpg",
-            "imp": 3,
+            "imp": 2,
             "line": "10.09.2022"
         },{
             "name": "be kind",
             "text": "noone likes unfriendly persons",
             "image": "../img/kind.jpg",
-            "imp": 0,
+            "imp": 1,
             "line": "01.09.2022"
         },{
             "name": "do workouts",
             "text": "healthy life = better life",
             "image": "../img/workout.jpg",
-            "imp": 5,
+            "imp": 4,
             "line": "25.12.2022"
         },{
             "name": "enjoy free time",
             "text": "life needs a reason to live",
             "image": "../img/freetime.jpg",
-            "imp": 4,
+            "imp": 1,
             "line": "31.12.2022"
         }
     ]
