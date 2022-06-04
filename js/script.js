@@ -51,8 +51,18 @@ function counterAction() {
     })
   }
 }
+//button color forloop test
+// function colorButn(){
+//   let btns = document.getElementsByClassName("btn-prio");
+//   for (let i = 2; i < btns.length; i++){
+//     btns[i].addEventListener("click",changeColor);
+//     document.getElementsByClassName("btn-prio")[i].innerHTML.style.backgroundColor="yellow";
+//     }
+//   }
+//   colorButn()
+  
 
-// color change test
+// color change switch test
 
 // function change(){
 //   let btns = document.getElementsByClassName("btn-prio");
