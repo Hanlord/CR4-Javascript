@@ -55,7 +55,7 @@ function counterAction() {
     })
   }
 }
-
+//sort button
 let btnsort =document.getElementById("sorti").addEventListener("click",sort);
     function sort(){
     let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
@@ -83,6 +83,7 @@ updateHTML(tasks);
 // cant get querySelectorAll to work only first button works
 const colorBtn = document.querySelector(".btn-prio");
 const colorChange = (e) => {
+  for (let i = 0; i < colorBtn.length; i++ )
   console.log(e.target.value);
   if(e.target.value > 3){
     e.target.style.backgroundColor="red";
