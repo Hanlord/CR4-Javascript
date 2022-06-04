@@ -46,7 +46,12 @@ function counterAction() {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
-
+      if (count[i] > 1){
+        document.btns.style.backgroundColor = "yellow";
+      } else if(count[i] > 3){
+        document.btns.style.backgroundColor = "red";
+      }
+    
       // document.getElementById("button1").addEventListener("click", colorChange);
       // function colorChange(){
       // if("result")[i]
@@ -95,15 +100,30 @@ updateHTML(tasks);
 const colorBtn = document.querySelector(".btn-prio");
 const colorChange = (e) => {
   console.log(e.target.value);
-  if(e.target.value > 2){
+  if(e.target.value > 1){
     e.target.style.backgroundColor="red";
-  }else if(e.target.value = 4){
+  }else if(e.target.value = 3){
     e.target.style.backgroundColor="yellow";
   }
 }
 
 colorBtn.addEventListener("click", colorChange);
 
+//test2 colorChange 
+// const colorBtn = () => {
+//   const priobtn = document.querySelector(".btn-prio");
+//   priobtn.forEach((btn, i) => {
+//     btn.addEventListener("click", colorChange);
+//     function colorChange(){
+//       if(i > 1){
+//         btn.style.backgroundColor="yellow";
+//       }else if( i > 3){
+//         btn.style.backgroundColor="red";
+//       }
+//     }
+//   })
+// }
+// colorChange();
 
 
 
