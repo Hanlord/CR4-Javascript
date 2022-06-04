@@ -20,7 +20,7 @@ function updateHTML(arr) {
     <p class="card-text">${x.text}</p><hr>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-triangle-exclamation"></i>
-    <p>&ensp;Priority level: &nbsp;</p> <a id="button" class="btn-prio btn btn-success"><span class="result">${x.imp}</span></a>
+    <p>&ensp;Priority level: &nbsp;</p> <a id="button1" type="button" class="btn-prio btn btn-success"><span class="result">${x.imp}</span></a>
     </div>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-calendar-days"></i>
@@ -36,9 +36,9 @@ function updateHTML(arr) {
     `;
   }
   counterAction();
-  change();
+  
 }
-
+//button counter
 function counterAction() {
   let btns = document.getElementsByClassName("btn-prio");
   let count = 0;
@@ -48,10 +48,12 @@ function counterAction() {
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
       var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
       updateHTML(sortedArray);
-    });
+    })
   }
 }
+
 // color change
+
 function change(){
   let btns = document.getElementsByClassName("btn-prio");
   console.log(btns);
@@ -66,10 +68,11 @@ function change(){
     
   }
 }
+// change()
 
-// test
+// background test
 
-const btnArr = document.getElementsByTagName("btn-prio");
+let btnArr = document.getElementsByTagName("btn-prio");
         for(i = 0; i < btnArr.length; i++){
             btnArr[i].addEventListener("click", changeColor);
         }
@@ -79,7 +82,7 @@ const btnArr = document.getElementsByTagName("btn-prio");
             let blue = Math.floor(Math.random() * 255);
             document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
         }
-  
+ changeColor();
 //Sort Button
 
 function sortprio() {
@@ -88,18 +91,36 @@ function sortprio() {
     btnprio[i].addEventListener("click", function(){
       tasks[i].sort((a, b)=> b.imp - a.imp);
       updateHTML(sortprio);
-      let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
-      console.log(sortedArray);
-      sortprio(sortedArray);
+      let sortedArrays = tasks.sort((a, b) => b.imp - a.imp);
+      console.log(sortedArrays);
+      sortprio(sortedArrays);
     })
   }
 }
-sortprio();
-updateHTML(tasks);
-counterAction();
-change();
-changeColor();
+// sortprio()
 
+updateHTML(tasks);
+
+
+//test colorChange with arrow (e.target)
+const colorBtn = document.querySelector("#button1");
+
+const btnAdd = document.querySelector("#button1");
+
+btnAdd.addEventListener("click", (e)=>{
+  e.preventDefault();
+  console.log("works")
+})
+const colorChange = (e) => {
+  console.log(e.target.value);
+  if(e.target.value > 2 ){
+    e.target.style.backgroundColor="yellow";
+  }else(e.target.value > 4);{
+    e.target.style.backgroundColor="red";
+  }
+}
+
+colorBtn.addEventListener("click", colorChange);
 
 
 
