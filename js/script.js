@@ -63,7 +63,7 @@ let btnsort =document.getElementById("sorti").addEventListener("click",sort);
     }
     sort();
        
-//background random bonus
+//background random generator bonus
 let btnArr = document.getElementById("result");
         for(i = 0; i < btnArr.length; i++){
             btnArr[i].addEventListener("click", changeColor);
