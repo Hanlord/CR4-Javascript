@@ -46,29 +46,12 @@ function counterAction() {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
-      if (count[i] > 1){
-        document.btns.style.backgroundColor = "yellow";
-      } else if(count[i] > 3){
-        document.btns.style.backgroundColor = "red";
-      }
-    
-      // document.getElementById("button1").addEventListener("click", colorChange);
-      // function colorChange(){
-      // if("result")[i]
-
-    // }
-
-      // function changebackground(){
-      //   if (tasks[i]>1){
-      //   document.getElementById("result").style.backgroundColor='yellow';
-      // }else if (tasks[i]>2){
-      //   btns[i].addEventListener("click", function(){
-      //     tasks[i];
-      //     document.getElementsByClassName("result").style.backgroundColor='red';
-      //   })
+      //test
+      // if (count[i] > 1){
+      //   this.style.backgroundColor = "yellow";
+      // } else if(count[i] > 3){
+      //   this.style.backgroundColor = "red";
       // }
-      // }
-      // changebackground()
     })
   }
 }
@@ -96,34 +79,22 @@ let btnArr = document.getElementsByClassName("result");
 updateHTML(tasks);
 
 
-//test colorChange with arrow (e.target)
+//colorChange with arrow (e.target) 
+// cant get querySelectorAll to work only first button works
 const colorBtn = document.querySelector(".btn-prio");
 const colorChange = (e) => {
   console.log(e.target.value);
-  if(e.target.value > 1){
+  if(e.target.value > 3){
     e.target.style.backgroundColor="red";
-  }else if(e.target.value = 3){
+  }else if(e.target.value =+ 4){
     e.target.style.backgroundColor="yellow";
   }
 }
 
 colorBtn.addEventListener("click", colorChange);
 
-//test2 colorChange 
-// const colorBtn = () => {
-//   const priobtn = document.querySelector(".btn-prio");
-//   priobtn.forEach((btn, i) => {
-//     btn.addEventListener("click", colorChange);
-//     function colorChange(){
-//       if(i > 1){
-//         btn.style.backgroundColor="yellow";
-//       }else if( i > 3){
-//         btn.style.backgroundColor="red";
-//       }
-//     }
-//   })
-// }
-// colorChange();
+
+
 
 
 
