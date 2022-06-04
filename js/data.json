@@ -10,13 +10,13 @@ let cards = `
             "name": "Hofer",
             "text": "you need supply",
             "image": "../img/supermarket.jpg",
-            "imp": 1,
+            "imp": 0,
             "line": "26.07.2022"
         },{
             "name": "Spend time with Friends",
             "text": "social life is important",
             "image": "../img/friends.jpg",
-            "imp": 2,
+            "imp": 0,
             "line": "27.06.2022"
         },{
             "name": "Work",

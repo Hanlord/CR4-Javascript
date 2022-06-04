@@ -47,82 +47,36 @@ function counterAction() {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
 
-      function changebackground(){
-        if (tasks[i]>1){
-        document.getElementById("result").style.backgroundColor='yellow';
-      }else if (tasks[i]>2){
-        btns[i].addEventListener("click", function(){
-          tasks[i];
-          document.getElementsByClassName("result").style.backgroundColor='red';
-        })
-      }
-      }
-      changebackground();
-      
-      
-      //test if statement
-      // if(btns[i] > 1){
+      // document.getElementById("button1").addEventListener("click", colorChange);
+      // function colorChange(){
+      // if("result")[i]
+
+    // }
+
+      // function changebackground(){
+      //   if (tasks[i]>1){
+      //   document.getElementById("result").style.backgroundColor='yellow';
+      // }else if (tasks[i]>2){
       //   btns[i].addEventListener("click", function(){
       //     tasks[i];
-      //     document.getElementsByClassName("result")[i].innerHTML.style.backgroundColor="yellow";
-      //   })
-      // }else if (btns[i]>2){
-      //   btns[i].addEventListener("click", function(){
-      //     tasks[i];
-      //     document.getElementsByClassName("result")[i].innerHTML.style.backgroundColor="red";
+      //     document.getElementsByClassName("result").style.backgroundColor='red';
       //   })
       // }
-
-      //sort function test
-      // let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
-      // updateHTML(sortedArray);
+      // }
+      // changebackground()
     })
   }
 }
-//button sort test
-let btnsort =document.getElementById("sorti").addEventListener("click",sort);
 
-  function sort(){
-    
+let btnsort =document.getElementById("sorti").addEventListener("click",sort);
+    function sort(){
     let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
       updateHTML(sortedArray);
     }
     sort();
-        // function
-
-
-//button color forloop test
-// function colorButn(){
-//   let btns = document.getElementsByClassName("btn-prio");
-//   for (let i = 2; i < btns.length; i++){
-//     btns[i].addEventListener("click",changeColor);
-//     document.getElementsByClassName("btn-prio")[i].innerHTML.style.backgroundColor="yellow";
-//     }
-//   }
-//   colorButn()
-  
-
-// color change switch test
-
-// function change(){
-//   let btns = document.getElementsByClassName("btn-prio");
-//   console.log(btns);
-//   switch (true){
-//     case btns > 2:
-//     btns.style.backgorundColor="yellow";
-//     console.log(btns);
-
-//     case btns > 4:
-//       btns.style.backgroundColor="red";
-//       console.log(btns);
-    
-//   }
-// }
-// change()
-
-// background
-
-let btnArr = document.getElementsByClassName("btn-prio");
+       
+//background random bonus
+let btnArr = document.getElementsByClassName("result");
         for(i = 0; i < btnArr.length; i++){
             btnArr[i].addEventListener("click", changeColor);
         }
@@ -133,64 +87,12 @@ let btnArr = document.getElementsByClassName("btn-prio");
             document.body.style.backgroundColor = `rgb(${red},${green},${yellow})`;
         }
  changeColor();
-//Sort Button
 
-// test1
-// const btnSort = document.querySelector("#sorti");
-// function  sorti(){
-//   let btnSort = tasks.sort((a, b));
-//   btnSort.addEventListener("click", sorti());
-//   var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
-//       updateHTML(sortedArray);
-  
-// }
-// sorti()
-
-
- //test2 for loop test
-// function sortprio() {
-//   let btnsorti = document.getElementById("sorti");
-//   for (let i = 0; i < btnsorti.length;i++){
-//     btnsorti[i].addEventListener("click", function(){
-//       tasks[i].sort((a, b)=> b.imp - a.imp);
-//       updateHTML(sortprio);
-//       let sortedArrays = tasks.sort((a, b) => b.imp - a.imp);
-//       console.log(sortedArrays);
-//       sortprio(sortedArrays);
-//     })
-//   }
-// }
-// sortprio()
-
-//test3 .....
-// function sortCards(){
-//   Review.all = Review.all.sort((a,b)){
-//     if (impA < impB){
-//       return -1;
-//     }
-//     if (impA > impB){
-//       return 1;
-//     }
-//     return 0;
-//   }
-// }
-// document.getElementById("sorti").innerHTML="";
-// Review.all.forEach((r) =>{
-//   document.getElementById("sorti").innerHTML += r.renderReveiwCard();
-// })
-// sortCards();
 updateHTML(tasks);
 
 
 //test colorChange with arrow (e.target)
 const colorBtn = document.querySelector(".btn-prio");
-
-const btnAdd = document.querySelector(".btn-prio");
-
-btnAdd.addEventListener("click", (e)=>{
-  e.preventDefault();
-  console.log("works")
-})
 const colorChange = (e) => {
   console.log(e.target.value);
   if(e.target.value > 2){
