@@ -80,14 +80,14 @@ updateHTML(tasks);
 
 
 //colorChange with arrow (e.target) 
-// cant get querySelectorAll to work only first button works
+// cant get querySelectorAll to work only first button works when started first
 const colorBtn = document.querySelector(".btn-prio");
 const colorChange = (e) => {
   for (let i = 0; i < colorBtn.length; i++ )
   console.log(e.target.value);
   if(e.target.value > 3){
     e.target.style.backgroundColor="red";
-  }else if(e.target.value =+ 4){
+  }else if(e.target.value = 4){
     e.target.style.backgroundColor="yellow";
   }
 }
