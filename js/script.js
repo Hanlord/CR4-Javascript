@@ -107,7 +107,7 @@ let btnArr = document.getElementsByClassName("btn-prio");
 // sorti()
 
 
- //test2
+ //test2 for loop test
 // function sortprio() {
 //   let btnsorti = document.getElementById("sorti");
 //   for (let i = 0; i < btnsorti.length;i++){
@@ -122,7 +122,7 @@ let btnArr = document.getElementsByClassName("btn-prio");
 // }
 // sortprio()
 
-//test3
+//test3 .....
 // function sortCards(){
 //   Review.all = Review.all.sort((a,b)){
 //     if (impA < impB){
