@@ -46,7 +46,7 @@ function counterAction() {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
-      // var sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+      // let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
       // updateHTML(sortedArray);
     })
   }
@@ -54,20 +54,20 @@ function counterAction() {
 
 // color change test
 
-function change(){
-  let btns = document.getElementsByClassName("btn-prio");
-  console.log(btns);
-  switch (true){
-    case btns > 2:
-    btns.style.backgorundColor="yellow";
-    console.log(btns);
+// function change(){
+//   let btns = document.getElementsByClassName("btn-prio");
+//   console.log(btns);
+//   switch (true){
+//     case btns > 2:
+//     btns.style.backgorundColor="yellow";
+//     console.log(btns);
 
-    case btns > 4:
-      btns.style.backgroundColor="red";
-      console.log(btns);
+//     case btns > 4:
+//       btns.style.backgroundColor="red";
+//       console.log(btns);
     
-  }
-}
+//   }
+// }
 // change()
 
 // background
@@ -112,13 +112,30 @@ let btnArr = document.getElementsByClassName("btn-prio");
 // }
 // sortprio()
 
+//test3
+// function sortCards(){
+//   Review.all = Review.all.sort((a,b)){
+//     if (impA < impB){
+//       return -1;
+//     }
+//     if (impA > impB){
+//       return 1;
+//     }
+//     return 0;
+//   }
+// }
+// document.getElementById("sorti").innerHTML="";
+// Review.all.forEach((r) =>{
+//   document.getElementById("sorti").innerHTML += r.renderReveiwCard();
+// })
+// sortCards();
 updateHTML(tasks);
 
 
 //test colorChange with arrow (e.target)
 const colorBtn = document.querySelector(".btn-prio");
 
-const btnAdd = document.querySelector("#button1");
+const btnAdd = document.querySelector(".btn-prio");
 
 btnAdd.addEventListener("click", (e)=>{
   e.preventDefault();
