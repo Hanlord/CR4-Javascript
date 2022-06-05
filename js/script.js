@@ -58,7 +58,7 @@ function counterAction() {
 //sort button
 let btnsort =document.getElementById("sorti").addEventListener("click",sort);
     function sort(){
-    let sortedArray = tasks.sort((a, b) => b.imp - a.imp);
+    let sortedArray = tasks.sort((a, b) => a.imp - b.imp);
       updateHTML(sortedArray);
     }
     sort();
