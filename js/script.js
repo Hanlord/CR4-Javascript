@@ -45,13 +45,13 @@ function counterAction() {
     
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
-      document.getElementsByClassName("result")[i].innerHTML = tasks[i].imp;
+      document.getElementsByClassName("btn-prio")[i].innerHTML = tasks[i].imp;
       //test
-      // if (count[i] > 1){
-      //   this.style.backgroundColor = "yellow";
-      // } else if(count[i] > 3){
-      //   this.style.backgroundColor = "red";
-      // }
+      if (count[i] > 1){
+        this.style.backgroundColor = "yellow";
+      } else if(count[i] > 3){
+        this.style.backgroundColor = "red";
+      }
     })
   }
 }
@@ -93,6 +93,18 @@ const colorChange = (e) => {
 }
 
 colorBtn.addEventListener("click", colorChange);
+
+
+//colorChange test 2
+// const btn = document.getElementById('button1');
+
+// btn.addEventListener('click', function onClick() {
+//   btn.style.backgroundColor = 'yellow';
+//   btn.style.backgroundColor = 'red';
+// });
+
+
+
 
 
 
