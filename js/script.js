@@ -20,7 +20,7 @@ function updateHTML(arr) {
     <p class="card-text">${x.text}</p><hr>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-triangle-exclamation"></i>
-    <p>&ensp;Priority level: &nbsp;</p> <button id="button1" type="button" class="btn-prio btn ${prioritybuttonclass(x.imp)}">${x.imp}</button>
+    <p>&ensp;Priority level: &nbsp;</p> <button class="btn-prio btn ${buttonclass(x.imp)}">${x.imp}</button>
     </div>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-calendar-days"></i>
@@ -46,7 +46,7 @@ function counterAction() {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("btn-prio")[i].innerHTML = tasks[i].imp;
-      // test color change
+      
       // if (tasks[i] > 1){
       //   this.style.backgroundColor = "yellow";
       // } else if(tasks[i] > 3){
@@ -78,7 +78,7 @@ let btnArr = document.getElementById("result");
 
 updateHTML(tasks);
 
-function prioritybuttonclass(p) {
+function buttonclass(p) {
   if ([0,1].includes(p)) {
     return "btn-success"
     } else if ([2,3].includes(p)) {
