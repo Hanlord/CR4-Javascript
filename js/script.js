@@ -20,7 +20,7 @@ function updateHTML(arr) {
     <p class="card-text">${x.text}</p><hr>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-triangle-exclamation"></i>
-    <p>&ensp;Priority level: &nbsp;</p> <a id="button1" type="button" class="btn-prio btn btn-success"><span class="result">${x.imp}</span></a>
+    <p>&ensp;Priority level: &nbsp;</p> <button id="button1" type="button" class="btn-prio btn ${prioritybuttonclass(x.imp)}">${x.imp}</button>
     </div>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-calendar-days"></i>
@@ -46,22 +46,22 @@ function counterAction() {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("btn-prio")[i].innerHTML = tasks[i].imp;
-      //test
-      if (count[i] > 1){
-        this.style.backgroundColor = "yellow";
-      } else if(count[i] > 3){
-        this.style.backgroundColor = "red";
-      }
+      // test color change
+      // if (tasks[i] > 1){
+      //   this.style.backgroundColor = "yellow";
+      // } else if(tasks[i] > 3){
+      //   this.style.backgroundColor = "red";
+      // }
     })
   }
 }
 //sort button
-let btnsort =document.getElementById("sorti").addEventListener("click",sort);
-    function sort(){
+let btnsort =document.getElementById("sorti").addEventListener("click",sortTasks);
+    function sortTasks(){
     let sortedArray = tasks.sort((a, b) => a.imp - b.imp);
       updateHTML(sortedArray);
     }
-    sort();
+    sortTasks();
        
 //background random generator bonus
 let btnArr = document.getElementById("result");
@@ -78,34 +78,16 @@ let btnArr = document.getElementById("result");
 
 updateHTML(tasks);
 
-
-//colorChange with arrow (e.target) 
-// cant get querySelectorAll to work only first button works when started first
-const colorBtn = document.querySelector(".btn-prio");
-const colorChange = (e) => {
-  for (let i = 0; i < colorBtn.length; i++ )
-  console.log(e.target.value);
-  if(e.target.value > 3){
-    e.target.style.backgroundColor="red";
-  }else if(e.target.value = 4){
-    e.target.style.backgroundColor="yellow";
+function prioritybuttonclass(p) {
+  if ([0,1].includes(p)) {
+    return "btn-success"
+    } else if ([2,3].includes(p)) {
+      return "btn-warning"
+    } else {
+      return "btn-danger"
+    }
   }
-}
-
-colorBtn.addEventListener("click", colorChange);
-
-
-//colorChange test 2
-// const btn = document.getElementById('button1');
-
-// btn.addEventListener('click', function onClick() {
-//   btn.style.backgroundColor = 'yellow';
-//   btn.style.backgroundColor = 'red';
-// });
-
-
-
-
+  
 
 
 
