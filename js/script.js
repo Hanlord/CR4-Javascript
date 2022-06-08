@@ -20,7 +20,7 @@ function updateHTML(arr) {
     <p class="card-text">${x.text}</p><hr>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-triangle-exclamation"></i>
-    <p>&ensp;Priority level: &nbsp;</p> <button class="btn-prio btn ${buttonclass(x.imp)}">${x.imp}</button>
+    <p>&ensp;Priority level: &nbsp;</p> <button class="btn-prio btn btn-success">${x.imp}</button>
     </div>
     <div class="d-flex justify-content-start">
     <i class="fa-solid fa-calendar-days"></i>
@@ -37,7 +37,7 @@ function updateHTML(arr) {
   }
   counterAction();
 }
-//button counter
+
 function counterAction() {
   let btns = document.getElementsByClassName("btn-prio");
   let count = 0;
@@ -46,16 +46,21 @@ function counterAction() {
     btns[i].addEventListener("click", function () {
       tasks[i].imp++;
       document.getElementsByClassName("btn-prio")[i].innerHTML = tasks[i].imp;
-      
-      // if (tasks[i] > 1){
-      //   this.style.backgroundColor = "yellow";
-      // } else if(tasks[i] > 3){
-      //   this.style.backgroundColor = "red";
-      // }
+    checkColor(i);
+    
     })
+    checkColor(i);
   }
 }
-//sort button
+
+function checkColor(i){
+  if (tasks[i].imp > 3){
+  document.getElementsByClassName("btn-prio")[i].style.backgroundColor = "red";
+  } else if(tasks[i].imp > 1){
+  document.getElementsByClassName("btn-prio")[i].style.backgroundColor = "yellow";
+  }
+}
+
 let btnsort =document.getElementById("sorti").addEventListener("click",sortTasks);
     function sortTasks(){
     let sortedArray = tasks.sort((a, b) => a.imp - b.imp);
@@ -63,7 +68,7 @@ let btnsort =document.getElementById("sorti").addEventListener("click",sortTasks
     }
     sortTasks();
        
-//background random generator bonus
+
 let btnArr = document.getElementById("result");
         for(i = 0; i < btnArr.length; i++){
             btnArr[i].addEventListener("click", changeColor);
@@ -78,15 +83,7 @@ let btnArr = document.getElementById("result");
 
 updateHTML(tasks);
 
-function buttonclass(p) {
-  if ([0,1].includes(p)) {
-    return "btn-success"
-    } else if ([2,3].includes(p)) {
-      return "btn-warning"
-    } else {
-      return "btn-danger"
-    }
-  }
+
   
 
 
